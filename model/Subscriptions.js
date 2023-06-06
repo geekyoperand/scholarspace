@@ -9,23 +9,6 @@ const subscriptionSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  name: {
-    type: String,
-    required: true,
-  },
-  email: {
-    type: String,
-    required: true,
-    unique:true,
-  },
-  state: {
-    type: String,
-    required: true,
-  },
-  country: {
-    type: String,
-    required: true,
-  },
   createdOn: {
     type: Date,
     default: Date.now,
@@ -34,7 +17,7 @@ const subscriptionSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-});
+},{ timestamps: true });
 
 const Subscription = mongoose.model('Subscription', subscriptionSchema);
 
