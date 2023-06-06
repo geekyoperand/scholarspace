@@ -1,16 +1,16 @@
 const Subscription = require('../model/Subscriptions');
 
 // Service function to create a new subscription
-async function createSubscription(phoneNo, ipAddress) {
+async function createSubscription(phoneNo, ipAddress, name, email) {
   try {
      // Validate email format
-    //  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    //  if (!emailRegex.test(email)) {
-    //    throw new Error('Invalid email format');
-    //  }
+     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+     if (!emailRegex.test(email)) {
+       throw new Error('Invalid email format');
+     }
  
      // Check if the email already exists in the database
-     const existingSubscription = await Subscription.findOne({ phoneNo });
+     const existingSubscription = await Subscription.findOne({ email });
      if (existingSubscription) {
        throw new Error('Email already subscribed');
      }
@@ -18,10 +18,8 @@ async function createSubscription(phoneNo, ipAddress) {
     const newSubscription = new Subscription({
       phoneNo,
       ipAddress,
-      // name, 
-      // email, 
-      // state, 
-      // country
+      name, 
+      email
     });
 
     const createdSubscription = await newSubscription.save();
