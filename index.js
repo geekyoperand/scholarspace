@@ -1,12 +1,17 @@
 const express = require('express');
+const bodyParser = require('body-parser')
+
 const connectToMongo = require('./db');
 const app = express();
 const port = 5000;
 
 connectToMongo();
+app.use(bodyParser.urlencoded({ extended: false }))
 
+// parse application/json
+app.use(bodyParser.json())
 app.set('view engine', 'ejs'); // Set EJS as the view engine
-app.use(express.json());
+// app.use(express.json());
 app.use(express.static('public'));
 app.use('/api', require('./routes/subscriptions'));
 

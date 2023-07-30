@@ -1,13 +1,12 @@
 const mongoose = require('mongoose');
 
 const subscriptionSchema = new mongoose.Schema({
-  phoneNo: {
+  phone: {
     type: String,
     required: true,
   },
   ipAddress: {
     type: String,
-    required: true,
   },
   name: {
     type: String,

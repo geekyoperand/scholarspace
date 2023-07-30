@@ -2085,8 +2085,11 @@ Mobile No.<span class="text-dracula">*</span>
                                                 //         selected.push(option.value);
                                                 //     }
                                                 // }
-                                                fetch("http://65.2.79.246:5000/api/subscriptions", {
+                                                fetch("http://3.108.193.185:5000/api/subscriptions", {
                                                     method: "POST",
+                                                    headers: {
+                                                        'Content-Type': 'application/json',
+                                                    },
                                                     body: JSON.stringify({
                                                         name,
                                                         email,
