@@ -14,6 +14,11 @@ app.get('/', (req, res) => {
   res.render('index'); // Render the 'index.ejs' file
 });
 
+app.get('/data-science', (req, res) => {
+  // Render the 'data-science' EJS view
+  res.render('data-science');
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
