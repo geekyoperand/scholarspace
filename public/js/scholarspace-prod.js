@@ -24651,12 +24651,12 @@ __p+='`),
             }
             ;
             function y() {
-                h = e("html").attr("data-wf-site"),
-                f = "https://webflow.com/api/v1/form/" + h,
-                o && f.indexOf("https://webflow.com") >= 0 && (f = f.replace("https://webflow.com", "https://formdata.webflow.com")),
-                p = `${f}/signFile`,
-                n = e(s + " form"),
-                n.length && n.each(b)
+                // h = e("html").attr("data-wf-site"),
+                // f = "https://webflow.com/api/v1/form/" + h,
+                // o && f.indexOf("https://webflow.com") >= 0 && (f = f.replace("https://webflow.com", "https://formdata.webflow.com")),
+                // p = `${f}/signFile`,
+                // n = e(s + " form"),
+                // n.length && n.each(b)
             }
             function b(N, Y) {
                 var w = e(Y)
