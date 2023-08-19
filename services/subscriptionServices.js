@@ -9,6 +9,7 @@ async function createSubscription(phone, ipAddress, name, email) {
     //    throw new Error('Invalid email format');
     //  }
  
+    
      // Check if the email already exists in the database
      const existingSubscription = await Subscription.findOne({ email });
      if (existingSubscription) {
