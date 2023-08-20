@@ -12,11 +12,7 @@ async function createSubscription(req, res) {
     res.status(500).json({ error: err.message });
   }
 }
-async function updateSubscription(req, res) {
-  res.status(200).json({});
-}
 
 module.exports = {
   createSubscription,
-  updateSubscription
 };

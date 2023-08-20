@@ -3,6 +3,5 @@ const router = express.Router();
 const subscriptionsController = require('../controllers/subscriptionsController.js');
 
 router.post('/subscriptions', subscriptionsController.createSubscription);
-router.post('/subscription', subscriptionsController.updateSubscription);
 
 module.exports = router;
