@@ -25,6 +25,11 @@ app.get('/data-science', (req, res) => {
   res.render('data-science');
 });
 
+app.get('/data-science-webinar-8oct', (req, res) => {
+  // Render the 'data-science' EJS view
+  res.render('data-science-webinar-8oct');
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
