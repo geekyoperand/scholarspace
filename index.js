@@ -25,9 +25,9 @@ app.get('/data-science', (req, res) => {
   res.render('data-science');
 });
 
-app.get('/data-science-webinar-8oct', (req, res) => {
+app.get('/datascience-webinar', (req, res) => {
   // Render the 'data-science' EJS view
-  res.render('data-science-webinar-8oct');
+  res.render('datascience-webinar');
 });
 
 app.listen(port, () => {
